@@ -1,9 +1,8 @@
-namespace SimpleServer
+﻿namespace SimpleServer
 {
-    public class GreetingObject : IGreetingObject
+    public class SpanishGreetingObject : IGreetingObject
     {
-
-        public string Greeting { get; set; } = "Hello! Desired action is: {0}, and message is: {1}";
+        public string Greeting { get; set; } = "Hola! La accion: {0}, y el mensaje es: {1}";
         public string GetOnGetAction(string someMessage)
         {
             return string.Format(Greeting, "HTTP Get", someMessage);

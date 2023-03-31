@@ -7,7 +7,12 @@ namespace SimpleServer.Controllers
     public class SimpleController : ControllerBase
     {
 
-        private GreetingObject _greetingObject = new GreetingObject();
+        private IGreetingObject _greetingObject;
+
+        public SimpleController(IGreetingObject greetingObject)
+        {
+            _greetingObject = greetingObject;
+        }
 
         [HttpGet("{someMessage}")]
         public ActionResult<string> Get([FromRoute] string someMessage)

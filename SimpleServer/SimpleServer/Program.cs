@@ -1,8 +1,12 @@
+using ServiceFactory.Factory;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+builder.Services.AddServices("Cool connection string ?) ");
 
 var app = builder.Build();
 

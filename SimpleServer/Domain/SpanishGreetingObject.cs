@@ -1,9 +1,10 @@
-namespace SimpleServer
-{
-    public class GreetingObject
-    {
+﻿using Domain.interfaces;
 
-        public string Greeting { get; set; } = "Hello! Desired action is: {0}, and message is: {1}";
+namespace Domain
+{
+    public class SpanishGreetingObject : IGreetingObject
+    {
+        public string Greeting { get; set; } = "Hola! La accion: {0}, y el mensaje es: {1}";
         public string GetOnGetAction(string someMessage)
         {
             return string.Format(Greeting, "HTTP Get", someMessage);
@@ -26,7 +27,7 @@ namespace SimpleServer
 
         public string GetOnDeleteAction(string someMessage, string someOtherMessage)
         {
-            return String.Format(Greeting, "HTTP Delete", someMessage+" and " + someOtherMessage);
+            return String.Format(Greeting, "HTTP Delete", someMessage + " and " + someOtherMessage);
         }
     }
 }

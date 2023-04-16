@@ -16,25 +16,25 @@ namespace SimpleServer.Controllers
         }
 
         [HttpGet("{someMessage}")]
-        public ActionResult<string> Get([FromRoute] string someMessage)
+        public IActionResult Get([FromRoute] string someMessage)
         {
             return StatusCode(500, _greetingObject.GetOnGetAction(someMessage));
         }
 
         [HttpPost]
-        public ActionResult<string> Post([FromBody] SomeDto someDto)
+        public IActionResult Post([FromBody] SomeDto someDto)
         {
             return new OkObjectResult(_greetingObject.GetOnPostAction(someDto.Data));
         }
 
         [HttpPut]
-        public ActionResult<string> Put([FromQuery] string someString, [FromBody] SomeDto someDto)
+        public IActionResult Put([FromQuery] string someString, [FromBody] SomeDto someDto)
         {
             return new OkObjectResult(_greetingObject.GetOnPutAction(someString, someDto.Data));
         }
 
         [HttpDelete]
-        public ActionResult<string> Delete([FromHeader] string someString)
+        public IActionResult Delete([FromHeader] string someString)
         {
             return new OkObjectResult(_greetingObject.GetOnDeleteAction(someString));
         }

@@ -1,6 +1,7 @@
 ﻿
 using Domain.interfaces;
 using Entities;
+using Microsoft.AspNetCore.Mvc;
 using Moq;
 
 namespace SimpleServer.test
@@ -23,14 +24,10 @@ namespace SimpleServer.test
                 LastName = "Lopez"
             };
 
-            UserOutModel userExpected = new UserOutModel()
-            {
-                FirstName = "Pepe",
-                LastName = "Lopez"
-            };
+            UserOutModel userExpected = new UserOutModel(user);
 
             var aUserService = new Mock<IUserService>(MockBehavior.Strict);
-            UserController aUserController = new UserController();
+            UserController aUserController = new UserController(aUserService.Object);
             aUserService.Setup(u => u.AddNewUser(It.IsAny<User>())).Returns(user);
 
             //Act
@@ -38,7 +35,10 @@ namespace SimpleServer.test
 
             //Assert
             aUserService.VerifyAll();
-            Assert.AreEqual(userExpected.FirstName, result.Value.FirstName);
+            var resultObject = result as OkObjectResult;
+            var userResult = resultObject.Value as UserOutModel;
+
+            Assert.AreEqual(userExpected.FirstName, userResult.FirstName);
         }
     }
 }

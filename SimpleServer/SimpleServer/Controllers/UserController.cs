@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Domain.interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace SimpleServer
 {
@@ -6,10 +7,22 @@ namespace SimpleServer
     [Route("api/users")]
     public class UserController
     {
-        [HttpPost]
-        public ActionResult<UserOutModel> PostNewUser([FromBody] UserInModel userInModel)
+        private readonly IUserService _userService;
+
+        public UserController(IUserService userService)
         {
-            throw new NotImplementedException();
+            _userService = userService;
+        }
+
+        [HttpPost]
+        public IActionResult PostNewUser([FromBody] UserInModel userInModel)
+        {
+            var user = userInModel.ToEntity();
+            var result = _userService.AddNewUser(user);
+
+            var userOut = new UserOutModel(result);
+
+            return new OkObjectResult(userOut);
         }
     }
 }

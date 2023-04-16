@@ -15,7 +15,7 @@ namespace Domain
 
         public User AddNewUser(User user)
         {
-            throw new NotImplementedException();
+            return userRepository.AddUser(user);
         }
     }
 }

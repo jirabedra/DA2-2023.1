@@ -1,4 +1,4 @@
-﻿namespace SimpleServer
+﻿namespace Domain.interfaces
 {
     public interface IGreetingObject
     {

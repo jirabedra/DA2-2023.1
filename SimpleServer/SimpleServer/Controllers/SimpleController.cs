@@ -1,9 +1,10 @@
+using Domain.interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SimpleServer.Controllers
 {
     [ApiController]
-    [Route("myController2")]
+    [Route("api/myController2")]
     public class SimpleController : ControllerBase
     {
 

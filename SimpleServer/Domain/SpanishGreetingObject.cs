@@ -1,4 +1,6 @@
-﻿namespace SimpleServer
+﻿using Domain.interfaces;
+
+namespace Domain
 {
     public class SpanishGreetingObject : IGreetingObject
     {

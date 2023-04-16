@@ -1,4 +1,4 @@
-using SimpleServer;
+using ServiceFactory.Factory;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IGreetingObject, IGreetingObject>();
+builder.Services.AddServices("Cool connection string ?) ");
 
 var app = builder.Build();
 

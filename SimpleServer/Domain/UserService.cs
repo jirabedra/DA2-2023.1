@@ -1,12 +1,21 @@
-﻿namespace Domain
-{
-    public class UserService
-    {
-        private global::Moq.Mock<IUserRepository> userRepository;
+﻿using Domain.interfaces;
+using Entities;
+using Repositories.Interfaces;
 
-        public UserService(global::Moq.Mock<IUserRepository> userRepository)
+namespace Domain
+{
+    public class UserService:IUserService
+    {
+        private readonly IUserRepository userRepository;
+
+        public UserService(IUserRepository userRepository)
         {
             this.userRepository = userRepository;
+        }
+
+        public User AddNewUser(User user)
+        {
+            throw new NotImplementedException();
         }
     }
 }

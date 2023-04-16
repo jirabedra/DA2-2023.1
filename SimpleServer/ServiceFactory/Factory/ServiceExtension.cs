@@ -10,6 +10,7 @@ namespace ServiceFactory.Factory
         {
             Console.WriteLine($"You can use this {conectionString} in the DB Implementation :O ");
             services.AddScoped<IGreetingObject, GreetingObject>();
+            services.AddScoped<IUserService, UserService>();
             return services;
         }
 

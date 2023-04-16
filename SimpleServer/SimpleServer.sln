@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleServer.test", "Simple
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{ABD5D99D-9B3F-4B0F-A122-4727D9E02F7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Test", "Domain.Test\Domain.Test.csproj", "{1F832773-746D-4126-9491-3A21B9BEF033}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories.Interfaces", "Repositories.Interfaces\Repositories.Interfaces.csproj", "{4166B2D6-440D-4127-98B4-D90790546EEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{ABD5D99D-9B3F-4B0F-A122-4727D9E02F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABD5D99D-9B3F-4B0F-A122-4727D9E02F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABD5D99D-9B3F-4B0F-A122-4727D9E02F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F832773-746D-4126-9491-3A21B9BEF033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F832773-746D-4126-9491-3A21B9BEF033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F832773-746D-4126-9491-3A21B9BEF033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F832773-746D-4126-9491-3A21B9BEF033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4166B2D6-440D-4127-98B4-D90790546EEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4166B2D6-440D-4127-98B4-D90790546EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4166B2D6-440D-4127-98B4-D90790546EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4166B2D6-440D-4127-98B4-D90790546EEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

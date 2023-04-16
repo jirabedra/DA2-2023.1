@@ -1,5 +1,6 @@
 using Entities;
 using Moq;
+using Repositories.Interfaces;
 
 namespace Domain.Test
 {
@@ -17,13 +18,15 @@ namespace Domain.Test
             };
 
             var userRepository = new Mock<IUserRepository>(MockBehavior.Strict);
-            var userService = new UserService(userRepository)
+            var userService = new UserService(userRepository.Object);
+            userRepository.Setup(u => u.AddUser(It.IsAny<User>())).Returns(user);
 
             //Act 
-
+            var result = userService.AddNewUser(user);
 
             //Assert
-
+            userRepository.VerifyAll();
+            Assert.AreEqual(user, result);
         }
     }
 }

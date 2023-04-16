@@ -1,6 +1,6 @@
-﻿using Domain.interfaces;
+﻿using Domain.Interfaces;
 using Entities;
-using Repositories.Interfaces;
+using DataAccess.Interfaces;
 
 namespace Domain
 {

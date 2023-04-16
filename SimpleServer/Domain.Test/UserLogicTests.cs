@@ -1,6 +1,6 @@
 using Entities;
 using Moq;
-using Repositories.Interfaces;
+using DataAccess.Interfaces;
 
 namespace Domain.Test
 {

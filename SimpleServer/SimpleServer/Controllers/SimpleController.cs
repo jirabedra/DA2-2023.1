@@ -1,4 +1,4 @@
-using Domain.interfaces;
+using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SimpleServer.Controllers

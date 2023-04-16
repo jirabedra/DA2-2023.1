@@ -1,6 +1,6 @@
 ﻿using Entities;
 
-namespace Repositories.Interfaces
+namespace DataAccess.Interfaces
 {
     public interface IUserRepository
     {

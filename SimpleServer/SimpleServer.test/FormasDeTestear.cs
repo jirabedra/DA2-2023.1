@@ -1,4 +1,4 @@
-using Domain.interfaces;
+using Domain.Interfaces;
 using Moq;
 using SimpleServer.Controllers;
 using Microsoft.AspNetCore.Mvc;

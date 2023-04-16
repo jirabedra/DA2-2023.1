@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddServices("Cool connection string ?) ");
+builder.Services.AddServices(builder.Configuration.GetConnectionString("SimpleServerDB"));
 
 var app = builder.Build();
 

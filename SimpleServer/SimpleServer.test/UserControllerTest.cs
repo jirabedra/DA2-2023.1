@@ -1,5 +1,5 @@
 ﻿
-using Domain.interfaces;
+using Domain.Interfaces;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Moq;

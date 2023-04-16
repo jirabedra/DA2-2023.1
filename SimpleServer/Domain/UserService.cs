@@ -15,6 +15,7 @@ namespace Domain
 
         public User AddNewUser(User user)
         {
+            user.Validate();
             return userRepository.AddUser(user);
         }
     }

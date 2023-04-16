@@ -28,5 +28,36 @@ namespace Domain.Test
             userRepository.VerifyAll();
             Assert.AreEqual(user, result);
         }
+
+        [TestMethod]
+        public void AddNewUserWithEmptyFirstName()
+        {
+            //Arrange 
+            Exception exceptionResult = null;
+            var userRepository = new Mock<IUserRepository>();
+            try
+            {
+                User user = new User()
+                {
+                    FirstName = "",
+                    LastName = "Lopez"
+                };
+                var userService = new UserService(userRepository.Object);
+
+                //Act 
+                var result = userService.AddNewUser(user);
+            }
+            catch (Exception ex)
+            {
+                exceptionResult = ex;
+            }
+
+            //Assert
+            userRepository.VerifyAll();
+            Assert.IsNotNull(exceptionResult);
+            Assert.IsInstanceOfType(exceptionResult, typeof(ArgumentException));
+            Assert.AreEqual(exceptionResult.Message, "Nombre vacio");
+
+        }
     }
 }

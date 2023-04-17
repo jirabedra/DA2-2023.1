@@ -1,13 +1,8 @@
 ﻿using DataAccess.Interfaces;
-using Domain.Interfaces.Exceptions;
 using Entities;
+using Entities.Exceptions;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Repositories
 {
@@ -29,7 +24,8 @@ namespace DataAccess.Repositories
                 return newUser;
 
             }
-            catch(SqlException s) {
+            catch (SqlException s)
+            {
                 throw new QueryException(s);
             }
             catch (Exception ex)

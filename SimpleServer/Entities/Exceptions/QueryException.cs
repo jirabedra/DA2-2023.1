@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Interfaces.Exceptions
+namespace Entities.Exceptions
 {
     public class QueryException : Exception
     {

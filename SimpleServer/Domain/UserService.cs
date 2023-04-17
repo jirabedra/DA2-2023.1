@@ -16,6 +16,7 @@ namespace Domain
         public User AddNewUser(User user)
         {
             user.Validate();
+            user.Timestamp = DateTime.Now;
             return userRepository.AddUser(user);
         }
     }

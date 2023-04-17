@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.Interfaces.Exceptions
+﻿
+namespace Entities.Exceptions
 {
     public class UnexpectedDataAccessException : Exception
     {

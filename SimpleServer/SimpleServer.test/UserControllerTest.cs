@@ -27,8 +27,8 @@ namespace SimpleServer.test
             UserOutModel userExpected = new UserOutModel(user);
 
             var aUserService = new Mock<IUserService>(MockBehavior.Strict);
-            UserController aUserController = new UserController(aUserService.Object);
             aUserService.Setup(u => u.AddNewUser(It.IsAny<User>())).Returns(user);
+            UserController aUserController = new UserController(aUserService.Object);
 
             //Act
             var result = aUserController.PostNewUser(aUserIn);

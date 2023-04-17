@@ -1,4 +1,5 @@
 ﻿using Domain.Interfaces;
+using Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SimpleServer
@@ -17,10 +18,10 @@ namespace SimpleServer
         [HttpPost]
         public IActionResult PostNewUser([FromBody] UserInModel userInModel)
         {
-            var user = userInModel.ToEntity();
-            var result = _userService.AddNewUser(user);
+            User user = userInModel.ToEntity();
+            User result = _userService.AddNewUser(user);
 
-            var userOut = new UserOutModel(result);
+            UserOutModel userOut = new UserOutModel(result);
 
             return new OkObjectResult(userOut);
         }

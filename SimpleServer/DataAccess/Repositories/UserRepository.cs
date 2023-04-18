@@ -33,5 +33,22 @@ namespace DataAccess.Repositories
                 throw new UnexpectedDataAccessException(ex);
             }
         }
+
+        public User Get(Func<User, bool> func)
+        {
+            try
+            {
+                var user = _dbContext.Set<User>().FirstOrDefault(func);
+                return user;
+            }
+            catch (SqlException s)
+            {
+                throw new QueryException(s);
+            }
+            catch (Exception ex)
+            {
+                throw new UnexpectedDataAccessException(ex);
+            }
+        }
     }
 }

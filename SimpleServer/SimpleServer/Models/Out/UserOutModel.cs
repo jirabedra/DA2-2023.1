@@ -7,7 +7,6 @@ namespace SimpleServer
     {
         public UserOutModel(User user)
         {
-
             FirstName = user.FirstName;
             LastName = user.LastName;
             Id = user.Id;

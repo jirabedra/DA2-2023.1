@@ -1,6 +1,6 @@
-﻿using Domain.interfaces;
+﻿using Domain.Interfaces;
 using Entities;
-using Repositories.Interfaces;
+using DataAccess.Interfaces;
 
 namespace Domain
 {
@@ -16,6 +16,7 @@ namespace Domain
         public User AddNewUser(User user)
         {
             user.Validate();
+            user.Timestamp = DateTime.Now;
             return userRepository.AddUser(user);
         }
     }

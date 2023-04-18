@@ -1,4 +1,4 @@
-﻿namespace Domain.interfaces
+﻿namespace Domain.Interfaces
 {
     public interface IGreetingObject
     {

@@ -1,9 +1,10 @@
 ﻿using Entities;
 
-namespace Repositories.Interfaces
+namespace DataAccess.Interfaces
 {
     public interface IUserRepository
     {
         User AddUser(User newUser);
+        User Get(Func<User, bool> func);
     }
 }

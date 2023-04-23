@@ -50,5 +50,21 @@ namespace DataAccess.Repositories
                 throw new UnexpectedDataAccessException(ex);
             }
         }
+
+        public bool Exist(Func<User, bool> func)
+        {
+            try
+            {
+                return _dbContext.Set<User>().Any(func);
+            }
+            catch (SqlException s)
+            {
+                throw new QueryException(s);
+            }
+            catch (Exception ex)
+            {
+                throw new UnexpectedDataAccessException(ex);
+            }
+        }
     }
 }

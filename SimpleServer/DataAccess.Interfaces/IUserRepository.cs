@@ -6,5 +6,6 @@ namespace DataAccess.Interfaces
     {
         User AddUser(User newUser);
         User Get(Func<User, bool> func);
+        bool Exist(Func<User, bool> func);
     }
 }

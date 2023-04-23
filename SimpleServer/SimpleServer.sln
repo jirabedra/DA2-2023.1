@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleServer", "SimpleServer\SimpleServer.csproj", "{D494FF58-929A-4F61-B73A-5BE191136125}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleServerWebApp", "SimpleServerWebApp\SimpleServerWebApp.csproj", "{D494FF58-929A-4F61-B73A-5BE191136125}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceFactory", "ServiceFactory\ServiceFactory.csproj", "{9E065F16-478B-4C06-8763-778AF4F148E2}"
 EndProject
@@ -11,17 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Interfaces", "Domain
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{E0003C1E-1121-4B4B-9A00-A6D293D84025}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleServer.test", "SimpleServer.test\SimpleServer.test.csproj", "{D40DB091-7941-4490-82F8-A45ADB05885E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleServerWebApp.Tests", "SimpleServerWebApp.Tests\SimpleServerWebApp.Tests.csproj", "{D40DB091-7941-4490-82F8-A45ADB05885E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{ABD5D99D-9B3F-4B0F-A122-4727D9E02F7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Test", "Domain.Test\Domain.Test.csproj", "{1F832773-746D-4126-9491-3A21B9BEF033}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Tests", "Domain.Tests\Domain.Tests.csproj", "{1F832773-746D-4126-9491-3A21B9BEF033}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess.Interfaces", "DataAccess.Interfaces\DataAccess.Interfaces.csproj", "{4166B2D6-440D-4127-98B4-D90790546EEB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{901A90D1-82EA-4E72-8C43-88C0DCB8BAC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.Tests", "DataAccess.Tests\DataAccess.Tests.csproj", "{200780A7-6F12-4762-8574-67F1657470ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess.Tests", "DataAccess.Tests\DataAccess.Tests.csproj", "{200780A7-6F12-4762-8574-67F1657470ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

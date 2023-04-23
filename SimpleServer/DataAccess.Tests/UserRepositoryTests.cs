@@ -41,7 +41,7 @@ namespace DataAccess.Tests
 
             var simpleServerMock = new Mock<DbContext>();
             simpleServerMock.Setup(x => x.Set<User>()).Returns(mockSet.Object);
-            simpleServerMock.Setup(x => x.SaveChanges()).Returns(5);
+            simpleServerMock.Setup(x => x.SaveChanges()).Returns(0);
 
             var userRepository = new UserRepository(simpleServerMock.Object);
 
@@ -106,7 +106,6 @@ namespace DataAccess.Tests
 
             var simpleServerMock = new Mock<DbContext>();
             simpleServerMock.Setup(x => x.Set<User>()).Returns(mockSet.Object);
-            simpleServerMock.Setup(x => x.SaveChanges()).Returns(1);
             var userRepository = new UserRepository(simpleServerMock.Object);
 
             //Act
